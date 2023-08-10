@@ -25,6 +25,7 @@ const App = () => {
         <hr />
         <div>
           <Content />
+          
         </div>
       </div>
     </div>
