@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Header extends Component {
+class Subtitle extends Component {
     render() {
         return (
                 <div className="todo">
@@ -10,4 +10,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Subtitle;
