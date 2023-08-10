@@ -3,13 +3,12 @@ import React, { Component } from 'react';
 class Active extends Component {
     render() {
         return (
-                <div classname="navigation-active">
-                    <div classname="navigation-bar active">
-                        Active
-                    </div>
-                    <div classname="active-line"></div>
-                </div>
-            
+            <div className="navigation-active">
+            <div className="navigation-bar active">
+              Active
+            </div>
+            <div className="active-line" />
+          </div>
         );
     }
 }

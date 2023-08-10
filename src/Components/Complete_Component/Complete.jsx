@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 class Complete extends Component {
     render() {
         return (
-            <div classname="navigation-completed">
-                <div classname="navigation-bar completed">
+            <div className="navigation-completed">
+                <div className="navigation-bar completed">
                     Completed
                 </div>
-                <div classname="completed-line"></div>
+                <div className="completed-line" />
             </div>
         );
     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class All extends Component {
+class Header extends Component {
     render() {
         return (
                 <div className="todo">
@@ -10,4 +10,4 @@ class All extends Component {
     }
 }
 
-export default All;
+export default Header;

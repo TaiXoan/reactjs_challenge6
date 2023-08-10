@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 class All extends Component {
     render() {
         return (
-            <div classname="navigation-all">
-                <div classname="navigation-bar all">
-                    All
-                </div>
-                <div classname="all-line">
-                </div>
+            <div className="navigation-all">
+            <div className="navigation-bar all">
+              All
             </div>
+            <div className="all-line">
+            </div>
+          </div>
         );
     }
 }
