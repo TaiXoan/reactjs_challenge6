@@ -1,29 +1,32 @@
-
-*{
+* {
   margin: 0;
 }
 
 .container {
   position: relative;
-  font-family: 'Raleway', sans-serif;
+
+  font-family: Montserrat;
   text-align: center;
   max-width: 608px;
   margin: 0 auto;
   margin-top: 32px;
 }
-.container .navigation{
+
+.container .navigation {
   color: #333;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 600;
   display: flex;
   justify-content: center;
   gap: 114px;
+  cursor: pointer;
 }
+
 .container .all-line {
   padding: 2px 45px;
   border-radius: 4px 4px 0px 0px;
-  background: #2F80ED;
+  background: #2f80ed;
 }
 
 .navigation-bar {
@@ -31,10 +34,21 @@
 }
 
 .navigation-bar:hover {
- cursor: pointer;
+  cursor: pointer;
 }
 
-hr{
-  background: #BDBDBD;
+hr {
+  background: #bdbdbd;
   margin-bottom: 16px;
+}
+.container .todo {
+  margin-bottom: 58px;
+  color: #333;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.62px;
 }

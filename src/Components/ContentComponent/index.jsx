@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+// import style from './styles.module.css';
 function Content() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [results, setResults] = useState([]);
 
   const handleInputChange = (event) => {
@@ -9,14 +9,23 @@ function Content() {
   };
 
   const handleAddButtonClick = () => {
-    if (inputValue.trim() !== '') {
+    if (inputValue.trim() !== "") {
       const newResult = {
-        id: Date.now(), // Tạo một ID duy nhất cho kết quả
-        text: inputValue
+        id: Date.now(),
+        text: inputValue,
       };
 
       setResults([...results, newResult]);
-      setInputValue('');
+      setInputValue("");
+    }
+  };
+
+  const handleDeleteAllClick = () => {
+    setResults([]);
+  };
+  const handlekeyDow = (event) => {
+    if (event.key === "Enter") {
+      handleAddButtonClick();
     }
   };
 
@@ -30,6 +39,7 @@ function Content() {
           placeholder="add details"
           value={inputValue}
           onChange={handleInputChange}
+          onKeyDown={handlekeyDow}
         />
         <button className="btn" onClick={handleAddButtonClick}>
           Add
@@ -52,7 +62,7 @@ function Content() {
         </div>
       ))}
 
-      <div className="btn-deleteall">
+      <div className="btn-deleteall" onClick={handleDeleteAllClick}>
         <div className="icon-delete">
           <svg
             xmlns="http://www.w3.org/2000/svg"
