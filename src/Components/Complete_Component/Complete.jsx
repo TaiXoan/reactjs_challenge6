@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Complete extends Component {
+class complete extends Component {
     render() {
         return (
             <div className="navigation-completed">
-                <div className="navigation-bar completed">
+                <div className="completed">
                     Completed
                 </div>
                 <div className="completed-line" />
@@ -12,5 +12,4 @@ class Complete extends Component {
         );
     }
 }
-
-export default Complete;
+export default complete;

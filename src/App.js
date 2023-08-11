@@ -10,8 +10,6 @@ import Content from './Components/Content_Component';
 import './Components/Subtitle/style.css';
 import './Components/Content_Component/style.css'
 
-
-
 const App = () => {
   return (
     <div className="container">
@@ -25,7 +23,6 @@ const App = () => {
         <hr />
         <div>
           <Content />
-          
         </div>
       </div>
     </div>
