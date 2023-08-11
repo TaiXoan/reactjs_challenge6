@@ -7,6 +7,7 @@ import Active from './Components/Active_Component';
 import Complete from './Components/Complete_Component/Complete';
 import Content from './Components/Content_Component';
 
+
 import './Components/Subtitle/style.css';
 import './Components/Content_Component/style.css'
 
