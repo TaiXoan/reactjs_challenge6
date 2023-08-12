@@ -1,0 +1,24 @@
+.navigationBar.active::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: inline-block;
+  width: 60%;
+  height: 4px;
+  content: '';
+  background-color: #2f80ed;
+  border-radius: 4px 4px 0 0;
+  transform: translateX(-50%);
+}
+
+
+.navigationCompleted {
+  width: 100%;
+  position: relative;
+  padding: 16px 10.1%;
+}
+  
+.navigationCompleted:hover {
+  background-color: #dfdfdf54;
+  cursor: pointer;
+}

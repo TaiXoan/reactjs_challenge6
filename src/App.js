@@ -1,32 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
-import All from './Components/AllComponent';
-import Active from './Components/ActiveComponent';
-import Complete from './Components/CompleteComponent/Complete';
-import Content from './Components/ContentComponent';
-
-
-import './Components/ContentComponent/style.css';
+import React, { useState } from "react";
+import './App.css'
+import { BrowserRouter as Router } from "react-router-dom";
+import ActiveComponent from "./Components/ActiveComponent";
+import AllComponent from "./Components/AllComponent";
+import CompletedComponent from "./Components/CompletedComponent";
+import ContentComponent from "./Components/ContentComponent";
 
 const App = () => {
+  const [activeTab, setActiveTab] = useState("all");
   return (
-    <div className="container">
-      <div className="maincontent">
-      <div className="todo">
-                #todo
-            </div>
-        <div className="navigation">
-          <All />
-          <Active />
-          <Complete />
-        </div>
-        <hr />
-        <div>
-          <Content />
+    <Router>
+      <div className="container">
+        <div className="maincontent">
+          <div className="todo">#todo</div>
+          <div className="wrap-menu">
+            <AllComponent
+              setActiveTab={setActiveTab}
+              activeTab={activeTab}
+            ></AllComponent>
+            <ActiveComponent
+              setActiveTab={setActiveTab}
+              activeTab={activeTab}
+            ></ActiveComponent>
+            <CompletedComponent
+              setActiveTab={setActiveTab}
+              activeTab={activeTab}
+            ></CompletedComponent>
+          </div>
+          <ContentComponent activeTab={activeTab} />
         </div>
       </div>
-    </div>
+    </Router>
   );
-}
+};
+
 export default App;
