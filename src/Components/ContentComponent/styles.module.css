@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-input#month-input {
+input.formcontrol{
   padding: 20px 0px 19px 12px;
   width: 75.7%;
   margin-right: 26.5px;
@@ -33,13 +33,13 @@ button.btn:hover {
   cursor: pointer;
 }
 
-.container .result {
+.result {
   display: flex;
   align-items: center;
   margin-bottom: 27px;
 }
 
-.container .result .checkbox {
+.result .checkbox {
   border-radius: 4px;
   width: 24px;
   border: 1px solid #828282;
@@ -47,24 +47,24 @@ button.btn:hover {
   margin-right: 7px;
 }
 
-.container .result .text-result {
+.result .text-result {
   color: #000;
   font-size: 18px;
   font-weight: 500;
 }
 
-.text-result.text-result_item {
+.textresult.text-result_item {
   text-decoration: line-through;
 }
 
-.checkbox-item {
+.checkboxitem {
   background: #2f80ed;
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.result .icon-delete {
+.result .icondelete {
   right: 0px;
   position: absolute;
   display: flex;
@@ -75,11 +75,11 @@ button.btn:hover {
   fill: #fff;
 }
 
-.result .icon-delete svg path {
+.result .icondelete svg path {
   fill: #bdbdbd;
 }
 
-.container .btn-deleteall {
+ .btndeleteall {
   position: absolute;
   display: flex;
   right: 0px;
@@ -89,21 +89,21 @@ button.btn:hover {
   align-items: center;
 }
 
-.btn-deleteall .icon-delete {
+.btndeleteall .icondelete {
   fill: #fff;
   display: flex;
   align-items: center;
   margin-right: 3px;
 }
 
-.btn-deleteall .text-delete {
+.btndeleteall .textdelete {
   color: #fff;
   font-size: 12px;
   font-weight: 600;
 }
 
 .checkbox,
-.btn-deleteall,
-.icon-delete:hover {
+.btndeleteall,
+.icondelete:hover {
   cursor: pointer;
 }

@@ -1,6 +1,6 @@
 
+import styles from './styles.module.css'
 import React, { useState } from "react";
-// import './style.module.css'
 const Content = ({ activeTab }) => {
   const [inputValue, setInputValue] = useState("");
   const [items, setItems] = useState([]);
@@ -46,19 +46,20 @@ const Content = ({ activeTab }) => {
             <input
               type="text"
               id="month-input"
-              className="form-control"
+              className={styles.formcontrol}
               placeholder="add details"
               value={inputValue}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
             />
-            <button className="btn" onClick={handleAddItem}>
+            <button className={styles.btn} 
+            onClick={handleAddItem}>
               Add
             </button>
           </div>
           <div>
             {items.map((item, index) => (
-              <div key={index} className="result">
+              <div key={index} className={styles.result}>
                 <div
                   className={`checkbox ${item.showTick ? "checkbox-item" : ""}`}
                   onClick={() => handleToggleTick(index)}
@@ -92,18 +93,18 @@ const Content = ({ activeTab }) => {
             <input
               type="text"
               id="month-input"
-              className="form-control"
+              className={styles.formcontrol}
               placeholder="add details"
             />
-            <button className="btn">Add</button>
+            <button className={styles.btn}>Add</button>
           </div>
 
           {items.map(
             (item, index) =>
               !item.showTick && (
                 <div key={index} className="result">
-                  <div className="checkbox"></div>
-                  <div className="text-result">{item.text}</div>
+                  <div className={styles.checkbox}></div>
+                  <div className={styles.textresult}>{item.text}</div>
                 </div>
               )
           )}
@@ -116,7 +117,7 @@ const Content = ({ activeTab }) => {
             (item, index) =>
               item.showTick && (
                 <div key={index} className="result">
-                  <div className="checkbox checkbox-item" onClick={() => handleToggleTick(index)}>
+                  <div className={styles.checkboxitem} onClick={() => handleToggleTick(index)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="1em"
@@ -142,8 +143,8 @@ const Content = ({ activeTab }) => {
               )
           )}
 
-          <div className="btn-deleteall" onClick={handleDeleteAllChecked}>
-            <div className="icon-delete">
+          <div className={styles.btndeleteall} onClick={handleDeleteAllChecked}>
+            <div className={styles.icondelete}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="1em"
@@ -152,7 +153,7 @@ const Content = ({ activeTab }) => {
                 <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z" />
               </svg>
             </div>
-            <div className="text-delete">delete all</div>
+            <div className={styles.textdelete}>delete all</div>
           </div>
         </div>
       )}
