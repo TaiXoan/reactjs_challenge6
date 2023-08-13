@@ -18,6 +18,8 @@ const Content = ({ activeTab }) => {
     }
   };
 
+
+  
   const handleToggleTick = (index) => {
     const newItems = [...items];
     newItems[index].showTick = !newItems[index].showTick;
@@ -36,7 +38,7 @@ const Content = ({ activeTab }) => {
 
 
 
-  
+
   const handleDeleteAllChecked = () => {
     const newItems = items.filter((item) => !item.showTick);
     setItems(newItems);
