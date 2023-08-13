@@ -10,6 +10,8 @@ const Content = ({ activeTab }) => {
   };
 
   const handleAddItem = () => {
+
+    
     if (inputValue.trim() !== "") {
       setItems([...items, { text: inputValue, showTick: false }]);
       setInputValue("");
