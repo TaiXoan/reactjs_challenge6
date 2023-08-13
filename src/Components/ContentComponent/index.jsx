@@ -26,7 +26,7 @@ const Content = ({ activeTab }) => {
 
 
 
-  
+
 
   const handleDeleteItem = (index) => {
     const newItems = [...items];
@@ -34,6 +34,9 @@ const Content = ({ activeTab }) => {
     setItems(newItems);
   };
 
+
+
+  
   const handleDeleteAllChecked = () => {
     const newItems = items.filter((item) => !item.showTick);
     setItems(newItems);
