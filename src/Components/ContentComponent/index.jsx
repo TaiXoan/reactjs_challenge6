@@ -11,7 +11,7 @@ const Content = ({ activeTab }) => {
 
   const handleAddItem = () => {
 
-    
+
     if (inputValue.trim() !== "") {
       setItems([...items, { text: inputValue, showTick: false }]);
       setInputValue("");
@@ -23,6 +23,10 @@ const Content = ({ activeTab }) => {
     newItems[index].showTick = !newItems[index].showTick;
     setItems(newItems);
   };
+
+
+
+  
 
   const handleDeleteItem = (index) => {
     const newItems = [...items];
