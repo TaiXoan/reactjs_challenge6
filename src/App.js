@@ -6,6 +6,7 @@ import AllComponent from "./Components/AllComponent";
 import CompletedComponent from "./Components/CompletedComponent";
 import ContentComponent from "./Components/ContentComponent";
 
+
 const App = () => {
   const [activeTab, setActiveTab] = useState("all");
   return (
@@ -13,7 +14,7 @@ const App = () => {
       <div className="container">
         <div className="maincontent">
           <div className="todo">#todo</div>
-          <div className="wrap-menu">
+          <div className="wrap-content">
             <AllComponent
               setActiveTab={setActiveTab}
               activeTab={activeTab}

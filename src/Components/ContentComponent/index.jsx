@@ -42,7 +42,7 @@ const Content = ({ activeTab }) => {
     <div className="body">
       {activeTab === "all" && (
         <div>
-          <div className="form">
+          <div className={styles.form}>
             <input
               type="text"
               id="month-input"
@@ -61,7 +61,9 @@ const Content = ({ activeTab }) => {
             {items.map((item, index) => (
               <div key={index} className={styles.result}>
                 <div
-                  className={`checkbox ${item.showTick ? "checkbox-item" : ""}`}
+                   className={`${styles.checkBox} ${
+                      item.showTick ? styles.checkboxItem : ""
+                    }`}
                   onClick={() => handleToggleTick(index)}
                 >
                   {item.showTick && (
@@ -75,9 +77,8 @@ const Content = ({ activeTab }) => {
                   )}
                 </div>
                 <div
-                  className={`text-result ${
-                    item.showTick ? "text-result_item" : ""
-                  }`}
+                 className={`${styles.textResult} ${
+                  item.showTick ? styles.textResult_Item : "" }`}
                 >
                   {item.text}
                 </div>
@@ -89,12 +90,15 @@ const Content = ({ activeTab }) => {
 
       {activeTab === "active" && (
         <div>
-          <div className="form">
+          <div className={styles.form}>
             <input
               type="text"
               id="month-input"
               className={styles.formcontrol}
               placeholder="add details"
+              value={inputValue}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
             />
             <button className={styles.btn}>Add</button>
           </div>
@@ -102,9 +106,9 @@ const Content = ({ activeTab }) => {
           {items.map(
             (item, index) =>
               !item.showTick && (
-                <div key={index} className="result">
-                  <div className={styles.checkbox}></div>
-                  <div className={styles.textresult}>{item.text}</div>
+                <div key={index} className={styles.result}>
+                  <div className={styles.checkBox}></div>
+                  <div className={styles.textResult}>{item.text}</div>
                 </div>
               )
           )}
@@ -116,8 +120,14 @@ const Content = ({ activeTab }) => {
           {items.map(
             (item, index) =>
               item.showTick && (
-                <div key={index} className="result">
-                  <div className={styles.checkboxitem} onClick={() => handleToggleTick(index)}>
+                <div key={index} className={styles.result}>
+                   <div
+                   className={`${styles.checkBox} ${
+                      item.showTick ? styles.checkboxItem : ""
+                    }`}
+                  onClick={() => handleToggleTick(index)}
+                >
+             
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="1em"
@@ -127,10 +137,10 @@ const Content = ({ activeTab }) => {
                     </svg>
                   </div>
 
-                  <div className="text-result text-result_item" >
+                  <div className={`${styles.textResult} ${styles.textResult_Item}`}>
                     {item.text}
                   </div>
-                  <div className="icon-delete">
+                  <div className={styles.icondelete}>
                     <svg onClick={() => handleDeleteItem(index)}
                       xmlns="http://www.w3.org/2000/svg"
                       height="1em"

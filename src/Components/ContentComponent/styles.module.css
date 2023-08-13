@@ -1,4 +1,4 @@
-.container .form {
+.form {
   margin-bottom: 32px;
 }
 
@@ -39,7 +39,7 @@ button.btn:hover {
   margin-bottom: 27px;
 }
 
-.result .checkbox {
+.result .checkBox {
   border-radius: 4px;
   width: 24px;
   border: 1px solid #828282;
@@ -47,17 +47,17 @@ button.btn:hover {
   margin-right: 7px;
 }
 
-.result .text-result {
+.result .textResult {
   color: #000;
   font-size: 18px;
   font-weight: 500;
 }
 
-.textresult.text-result_item {
+.textResult.textResult_Item {
   text-decoration: line-through;
 }
 
-.checkboxitem {
+.checkboxItem {
   background: #2f80ed;
   align-items: center;
   display: flex;
@@ -71,7 +71,7 @@ button.btn:hover {
   align-items: center;
 }
 
-.result .checkbox svg path {
+.result .checkBox svg path {
   fill: #fff;
 }
 
@@ -102,7 +102,7 @@ button.btn:hover {
   font-weight: 600;
 }
 
-.checkbox,
+.checkBox,
 .btndeleteall,
 .icondelete:hover {
   cursor: pointer;
