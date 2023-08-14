@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-input.formcontrol{
+input.formcontrol {
   padding: 20px 0px 19px 12px;
   width: 75.7%;
   margin-right: 26.5px;
@@ -16,6 +16,7 @@ input.formcontrol{
   color: #828282;
   font-size: 14px;
 }
+
 
 button.btn {
   color: #fff;
@@ -79,7 +80,7 @@ button.btn:hover {
   fill: #bdbdbd;
 }
 
- .btndeleteall {
+.btndeleteall {
   position: absolute;
   display: flex;
   right: 0px;
