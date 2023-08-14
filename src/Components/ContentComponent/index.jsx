@@ -19,7 +19,7 @@ const Content = ({ activeTab }) => {
   };
 
 
-  
+
   const handleToggleTick = (index) => {
     const newItems = [...items];
     newItems[index].showTick = !newItems[index].showTick;
@@ -47,7 +47,7 @@ const Content = ({ activeTab }) => {
     if (event.key === 'Enter') {
       handleAddItem();
     }
-}
+  }
 
   return (
     <div className="body">
@@ -63,8 +63,8 @@ const Content = ({ activeTab }) => {
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
             />
-            <button className={styles.btn} 
-            onClick={handleAddItem}>
+            <button className={styles.btn}
+              onClick={handleAddItem}>
               Add
             </button>
           </div>
@@ -72,8 +72,7 @@ const Content = ({ activeTab }) => {
             {items.map((item, index) => (
               <div key={index} className={styles.result}>
                 <div
-                   className={`${styles.checkBox} ${
-                      item.showTick ? styles.checkboxItem : ""
+                  className={`${styles.checkBox} ${item.showTick ? styles.checkboxItem : ""
                     }`}
                   onClick={() => handleToggleTick(index)}
                 >
@@ -88,8 +87,7 @@ const Content = ({ activeTab }) => {
                   )}
                 </div>
                 <div
-                 className={`${styles.textResult} ${
-                  item.showTick ? styles.textResult_Item : "" }`}
+                  className={`${styles.textResult} ${item.showTick ? styles.textResult_Item : ""}`}
                 >
                   {item.text}
                 </div>
@@ -118,7 +116,21 @@ const Content = ({ activeTab }) => {
             (item, index) =>
               !item.showTick && (
                 <div key={index} className={styles.result}>
-                  <div className={styles.checkBox}></div>
+                  <div
+                    className={`${styles.checkBox} ${item.showTick ? styles.checkboxItem : ""
+                      }`}
+                    onClick={() => handleToggleTick(index)}
+                  >
+                    {item.showTick && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1em"
+                        viewBox="0 0 448 512"
+                      >
+                        <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+                      </svg>
+                    )}
+                  </div>
                   <div className={styles.textResult}>{item.text}</div>
                 </div>
               )
@@ -132,13 +144,12 @@ const Content = ({ activeTab }) => {
             (item, index) =>
               item.showTick && (
                 <div key={index} className={styles.result}>
-                   <div
-                   className={`${styles.checkBox} ${
-                      item.showTick ? styles.checkboxItem : ""
-                    }`}
-                  onClick={() => handleToggleTick(index)}
-                >
-             
+                  <div
+                    className={`${styles.checkBox} ${item.showTick ? styles.checkboxItem : ""
+                      }`}
+                    onClick={() => handleToggleTick(index)}
+                  >
+
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="1em"
